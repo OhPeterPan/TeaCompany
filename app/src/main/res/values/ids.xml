@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="toolbar" type="id" />
+    <item name="tvActTitle" type="id" />
+    <item name="swipeRefresh" type="id" />
+    <item name="recyclerView" type="id" />
+    <item name="tvNoData" type="id" />
+    <item name="flNoData" type="id" />
+    <item name="rootView" type="id" />
+</resources>

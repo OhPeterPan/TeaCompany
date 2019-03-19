@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="@dimen/viewHeight"
+    android:background="#F7F7F7"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/ivAdapterOrderGoodsPic"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:layout_margin="@dimen/margin6"
+        android:layout_weight="1.7"
+        android:background="@mipmap/image_loading"
+        android:scaleType="fitXY" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="7"
+        android:orientation="vertical"
+        android:padding="@dimen/padding6">
+
+        <!-- 价格 -->
+        <TextView
+            android:id="@+id/ivAdapterOrderGoodsPrice"
+            style="@style/textCommentTransParent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="￥00.00" />
+
+        <TextView
+            android:id="@+id/ivAdapterOrderGoodsName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/ivAdapterOrderGoodsPrice"
+            android:ellipsize="end"
+            android:lines="2"
+            android:text="asdfasdfasdfas"
+            android:textColor="#FF3D3D3D"
+            android:textSize="@dimen/titleTextSize" />
+
+        <TextView
+            android:id="@+id/ivAdapterOrderGoodsNumber"
+            style="@style/textCommentTransParent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="right|bottom"
+            android:text="X0" />
+
+        <TextView
+            android:id="@+id/ivAdapterSendOrderGoodsState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:gravity="right|bottom"
+            android:text="发货次数"
+            android:textColor="@color/backgroundRed"
+            android:textSize="@dimen/titleTextSize" />
+    </RelativeLayout>
+
+</LinearLayout>

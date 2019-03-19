@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fragmentFrame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/viewHeight" />
+
+    <RadioGroup
+        android:id="@+id/rgHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbHomeStore"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawablePadding="@dimen/padding3"
+            android:drawableTop="@drawable/select_home"
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding6"
+            android:paddingTop="@dimen/padding6"
+            android:text="首页"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/homeBottomTextSize" />
+
+        <RadioButton
+            android:id="@+id/rbOrderStore"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="@dimen/padding3"
+            android:drawableTop="@drawable/select_order"
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding6"
+            android:paddingTop="@dimen/padding6"
+            android:text="订单"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/homeBottomTextSize" />
+
+        <RadioButton
+            android:id="@+id/rbShopStore"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="@dimen/padding3"
+            android:drawableTop="@drawable/select_main_statistics"
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding6"
+            android:paddingTop="@dimen/padding6"
+            android:text="统计"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/homeBottomTextSize" />
+
+        <RadioButton
+            android:id="@+id/rbMessageStore"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="@dimen/padding3"
+            android:drawableTop="@drawable/select_message"
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding6"
+            android:paddingTop="@dimen/padding6"
+            android:text="消息"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/homeBottomTextSize"
+            android:visibility="gone" />
+    </RadioGroup>
+
+</LinearLayout>

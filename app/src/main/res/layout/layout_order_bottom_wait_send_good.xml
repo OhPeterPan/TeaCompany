@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llAdapterWaitSend"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:gravity="right"
+    android:orientation="horizontal"
+    android:padding="@dimen/padding6"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/tvOrderLookExpress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_gray_frame"
+        android:paddingLeft="@dimen/padding9"
+        android:paddingTop="@dimen/padding6"
+        android:paddingRight="@dimen/padding9"
+        android:paddingBottom="@dimen/padding6"
+        android:text="查看物流"
+        android:textColor="#2ab5d0"
+        android:textSize="@dimen/smallTextSize"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvAdapterChangeOrderSendGood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_gray_frame"
+        android:paddingLeft="@dimen/padding9"
+        android:paddingTop="@dimen/padding6"
+        android:paddingRight="@dimen/padding9"
+        android:paddingBottom="@dimen/padding6"
+        android:text="设置发货"
+        android:textColor="#1880c7"
+        android:textSize="@dimen/smallTextSize" />
+
+
+</LinearLayout>

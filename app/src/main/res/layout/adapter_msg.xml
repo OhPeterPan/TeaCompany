@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llAdapterChooseMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cbAdapterMsg"
+            style="@style/textCommentParent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:clickable="false"
+            android:drawableLeft="@drawable/check_select"
+            android:focusable="false"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingBottom="@dimen/padding12"
+            android:paddingLeft="@dimen/padding12"
+            android:paddingRight="@dimen/padding6"
+            android:paddingTop="@dimen/padding12" />
+
+
+        <TextView
+            android:id="@+id/tvAdapterMsgTime"
+            style="@style/textCommentParent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingLeft="@dimen/padding12"
+            android:paddingRight="@dimen/padding12"
+            android:text="2018-01-01" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/viewHeight" />
+
+    <TextView
+        android:id="@+id/tvAdapterMsgContent"
+        style="@style/textCommentParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:lineSpacingExtra="1.5dp"
+        android:padding="@dimen/padding12"
+        tools:text="您有订单需要处理，订单编号：8000000000112101" />
+</LinearLayout>

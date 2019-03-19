@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="order_state">
+        <item>未发货</item>
+        <item>只看一次发货</item>
+        <item>只看二次发货</item>
+        <item>只看三次发货</item>
+        <item>只看四次发货</item>
+        <item>未发完 </item>
+    </string-array>
+    <string-array name="take_good_index">
+        <item>一次 </item>
+        <item>二次 </item>
+        <item>三次 </item>
+        <item>四次 </item>
+        <item>五次 </item>
+    </string-array>
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layer_list_shadow"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <TextView
+        style="@style/textCommentParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="消息详情" />
+
+    <TextView
+        android:id="@+id/tvDialogMsgInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin15"
+        android:gravity="center"
+        android:lineSpacingExtra="2dp"
+        android:text="这里是消息的详情"
+        android:textColor="@color/textHintColor"
+        android:textSize="@dimen/smallTextSize" />
+
+    <TextView
+        android:id="@+id/tvConfirmLookMsg"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin15"
+        android:background="@drawable/shape_system_dialog_ground"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:padding="@dimen/padding12"
+        android:text="我知道了"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/titleTextSize" />
+</LinearLayout>

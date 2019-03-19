@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding6">
+
+        <ImageView
+            android:id="@+id/ivDialogOrderSendGoodsPic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/image_loading"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin6"
+            android:orientation="vertical"
+            android:padding="@dimen/padding6">
+
+            <TextView
+                android:id="@+id/tvDialogOrderSendGoodName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="5dp"
+                android:text="这是一个商品吧"
+                android:textColor="#FF3D3D3D"
+                android:textSize="@dimen/titleTextSize" />
+
+            <TextView
+                android:id="@+id/tvDialogOrderSendGoodOweNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:includeFontPadding="false"
+                android:text="当前欠：0"
+                android:textColor="@color/backgroundRed"
+                android:textSize="@dimen/titleTextSize" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        style="@style/textCommentParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding6"
+        android:text="输入本次发货数量：" />
+
+    <EditText
+        android:id="@+id/etDialogOrderSendGoodNumber"
+        style="@style/textCommentParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding12"
+        android:layout_marginLeft="@dimen/padding12"
+        android:layout_marginRight="@dimen/padding12"
+        android:layout_marginTop="@dimen/margin6"
+        android:background="@drawable/shape_ect_gray"
+        android:includeFontPadding="false"
+        android:inputType="number"
+        android:padding="@dimen/padding6"
+        android:textCursorDrawable="@drawable/shape_cursor" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/viewHeight"
+        android:background="@color/colorBackground" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvDialogSendGoodCancel"
+            style="@style/textCommentParent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:padding="@dimen/padding12"
+            android:text="取消" />
+
+        <TextView
+            android:id="@+id/tvDialogSendGoodConfirm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/backgroundRed"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:padding="@dimen/padding12"
+            android:text="确认"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/titleTextSize" />
+    </LinearLayout>
+</LinearLayout>

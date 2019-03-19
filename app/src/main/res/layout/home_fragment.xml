@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTradeMessage"
+                style="@style/textCommentParent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding12"
+                android:layout_marginTop="@dimen/margin20"
+                android:background="@drawable/layer_green"
+                android:paddingLeft="@dimen/padding9"
+                android:text="交易提示"
+                android:textColor="@color/textDarkColor"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTradeOrderNumber"
+                style="@style/textCommentParent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin12"
+                android:layout_marginTop="@dimen/padding12"
+                android:background="@color/backgroundLightYellow"
+                android:padding="@dimen/padding6"
+                android:textColor="@android:color/white"
+                app:layout_constraintLeft_toLeftOf="@id/tvTradeMessage"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTradeMessage"
+                tools:text="交易中的订单：323" />
+
+            <TextView
+                android:id="@+id/tvFragHomeWaitPay"
+                style="@style/textCommentParent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin20"
+                android:background="@drawable/shape_background_frame_green"
+                android:gravity="center"
+                android:paddingBottom="@dimen/padding12"
+                android:paddingLeft="@dimen/DP20"
+                android:paddingRight="@dimen/DP20"
+                android:paddingTop="@dimen/padding12"
+                android:text="待付款"
+                app:layout_constraintLeft_toLeftOf="@id/tvTradeOrderNumber"
+                app:layout_constraintTop_toBottomOf="@id/tvTradeOrderNumber" />
+
+            <TextView
+                android:id="@+id/tvFragHomeWaitSendGood"
+                style="@style/textCommentParent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_background_frame_green"
+                android:gravity="center"
+                android:paddingBottom="@dimen/padding12"
+                android:paddingLeft="@dimen/DP20"
+                android:paddingRight="@dimen/DP20"
+                android:paddingTop="@dimen/padding12"
+                android:text="待发货"
+                app:layout_constraintLeft_toRightOf="@id/tvFragHomeWaitPay"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvFragHomeWaitPay" />
+
+            <View
+                android:id="@+id/viewFragHomeOne"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/viewHeight"
+                android:layout_marginTop="30dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintTop_toBottomOf="@id/tvFragHomeWaitPay" />
+
+            <TextView
+                android:id="@+id/tvStoreGoodMessage"
+                style="@style/textCommentParent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding12"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/layer_green"
+                android:paddingLeft="@dimen/padding9"
+                android:text="店铺及商品提示"
+                android:textColor="@color/textDarkColor"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/viewFragHomeOne" />
+
+            <TextView
+                android:id="@+id/tvFragHomeVending"
+                style="@style/textCommentParent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding12"
+                android:layout_marginTop="@dimen/margin20"
+                android:background="@drawable/shape_background_frame_green"
+                android:gravity="center"
+                android:paddingBottom="@dimen/padding12"
+                android:paddingLeft="@dimen/DP20"
+                android:paddingRight="@dimen/DP20"
+                android:paddingTop="@dimen/padding12"
+                android:text="出售中"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvStoreGoodMessage" />
+
+            <View
+                android:id="@+id/viewFragHomeTwo"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/viewHeight"
+                android:layout_marginTop="30dp"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintTop_toBottomOf="@id/tvFragHomeVending" />
+
+            <TextView
+                android:id="@+id/tvStoreSellMessage"
+                style="@style/textCommentParent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding12"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/layer_green"
+                android:paddingLeft="@dimen/padding9"
+                android:text="销售情况统计"
+                android:textColor="@color/textDarkColor"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/viewFragHomeTwo" />
+
+            <com.example.administrator.chadaodiancompany.view.NestGridView
+                android:id="@+id/gridHomeMessage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/margin12"
+                android:layout_marginLeft="@dimen/padding12"
+                android:layout_marginRight="@dimen/margin12"
+                android:layout_marginTop="@dimen/margin20"
+                android:horizontalSpacing="@dimen/viewHeight"
+                android:numColumns="3"
+                android:overScrollMode="never"
+                android:verticalSpacing="@dimen/viewHeight"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvStoreSellMessage"
+                app:layout_constraintVertical_bias="0" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>

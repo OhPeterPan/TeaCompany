@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <TextView
+        style="@style/textCommentParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding12"
+        android:text="账号切换" />
+
+    <TextView
+        android:id="@+id/tvSettingName"
+        style="@style/textCommentParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:drawablePadding="@dimen/padding6"
+        android:drawableRight="@mipmap/yellow_arrows"
+        android:gravity="right|center_vertical"
+        android:paddingRight="@dimen/padding12"
+        android:text="账号切换" />
+</LinearLayout>

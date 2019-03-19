@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="false"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding12">
+
+            <EditText
+                android:id="@+id/etGoodsSearch"
+                style="@style/textCommentParent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/shape_ect_gray"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="请输入关键词搜索"
+                android:imeOptions="actionSearch"
+                android:maxLines="1"
+                android:padding="@dimen/padding9"
+                android:paddingLeft="@dimen/padding9"
+                android:singleLine="true"
+                android:textColorHint="@color/textHintColor"
+                android:textCursorDrawable="@drawable/shape_cursor" />
+
+            <TextView
+                android:id="@+id/ivGoodsSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding6"
+                android:text="取消"
+                android:textColor="@color/textDarkColor"
+                android:textSize="@dimen/titleTextSize" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/viewHeight" />
+
+        <com.zhy.view.flowlayout.FlowLayout
+            android:id="@+id/flowSearchLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:padding="@dimen/padding6" />
+
+        <TextView
+            android:id="@+id/clearGoodHistory"
+            style="@style/textCommentParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/padding25"
+            android:text="清空搜索历史" />
+    </LinearLayout>
+</ScrollView>

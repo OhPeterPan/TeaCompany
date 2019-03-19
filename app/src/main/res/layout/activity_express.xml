@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rgExpress"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:includeFontPadding="false"
+        android:padding="@dimen/padding12"
+        android:text="03 - 确认发货信息"
+        android:textColor="@color/textDarkColor"
+        android:textSize="14sp" />
+
+    <RadioButton
+        android:id="@+id/gbExpressChoose"
+        style="@style/textCommentParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/viewHeight"
+        android:background="@android:color/white"
+        android:button="@null"
+        android:checked="true"
+        android:drawableLeft="@drawable/check_select"
+        android:drawablePadding="@dimen/padding6"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding15"
+        android:text="有物流服务" />
+
+    <LinearLayout
+        android:id="@+id/llExpressDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/viewHeight"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding6">
+
+            <TextView
+                style="@style/textCommentParent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:padding="@dimen/padding6"
+                android:text="物流公司" />
+
+            <TextView
+                android:id="@+id/tvExpressDetail"
+                style="@style/textCommentParent"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin6"
+                android:layout_marginRight="@dimen/dp_40"
+                android:layout_weight="1"
+                android:background="@drawable/shape_white_circle_corner_dialog"
+                android:drawableRight="@mipmap/yellow_arrows"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/padding6"
+                android:paddingRight="@dimen/padding6" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding6">
+
+            <TextView
+                style="@style/textCommentParent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:padding="@dimen/padding6"
+                android:text="物流单号" />
+
+            <EditText
+                android:id="@+id/etExpressCode"
+                style="@style/textCommentParent"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin6"
+                android:layout_marginRight="@dimen/dp_40"
+                android:layout_weight="1"
+                android:background="@drawable/shape_white_circle_corner_dialog"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/padding6"
+                android:paddingRight="@dimen/padding6" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RadioButton
+        android:id="@+id/gbExpressNoChoose"
+        style="@style/textCommentParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/viewHeight"
+        android:background="@android:color/white"
+        android:button="@null"
+        android:drawableLeft="@drawable/check_select"
+        android:drawablePadding="@dimen/padding6"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding15"
+        android:text="无物流服务" />
+
+    <TextView
+        android:id="@+id/tvAddressConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin12"
+        android:background="@drawable/shape_background_red"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:padding="@dimen/padding12"
+        android:text="确认发货"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/titleTextSize" />
+</RadioGroup>

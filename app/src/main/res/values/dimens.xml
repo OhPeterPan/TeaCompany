@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="titleTextSize">13sp</dimen>
+    <dimen name="titleTextSize_14sp">14sp</dimen>
+    <dimen name="smallTextSize">12sp</dimen>
+    <dimen name="homeBottomTextSize">10sp</dimen>
+    <dimen name="splashTimeTextSize">8sp</dimen>
+    <dimen name="titleSize">17sp</dimen>
+    <dimen name="baseTitleSize">15sp</dimen>
+
+    <dimen name="paddingSmall">0.5dp</dimen>
+    <dimen name="paddingSmallpx">0.1px</dimen>
+    <dimen name="padding1">1dp</dimen>
+    <dimen name="paddingGrade">1.5dp</dimen>
+    <dimen name="paddingGradepx">1.1px</dimen>
+    <dimen name="padding3">3dp</dimen>
+    <dimen name="padding6">6dp</dimen>
+    <dimen name="padding9">9dp</dimen>
+    <dimen name="padding10">10dp</dimen>
+    <dimen name="padding12">12dp</dimen>
+    <dimen name="padding13">13dp</dimen>
+    <dimen name="padding15">15dp</dimen>
+    <dimen name="padding25">25dp</dimen>
+    <dimen name="homePadding">30dp</dimen>
+    <dimen name="cal_size">18sp</dimen>
+    <dimen name="calNumbersize">19sp</dimen>
+
+    <dimen name="margin1">1dp</dimen>
+    <dimen name="margin3">3dp</dimen>
+    <dimen name="margin6">6dp</dimen>
+    <dimen name="margin9">9dp</dimen>
+    <dimen name="margin12">12dp</dimen>
+    <dimen name="margin15">15dp</dimen>
+    <dimen name="margin20">20dp</dimen>
+
+    <dimen name="btnWidth">20dp</dimen>
+    <dimen name="btnHeight">45dp</dimen>
+    <dimen name="btnHeightBottom">40dp</dimen>
+
+    <dimen name="actHeight">50dp</dimen>
+
+    <dimen name="perIcon">65dp</dimen>
+    <dimen name="goodsPic">55dp</dimen>
+    <dimen name="payPerIcon">35dp</dimen>
+    <dimen name="cornerNumber">3dp</dimen>
+    <dimen name="cornerBtnNumber">4dp</dimen>
+
+    <dimen name="shapeCursorWidth">1dp</dimen>
+    <dimen name="shapeCursorHeight">3dp</dimen>
+
+    <dimen name="viewHeight">1dp</dimen>
+    <!--稍微大一点的间隔处-->
+    <dimen name="middleViewHeight">2dp</dimen>
+    <dimen name="itemSpacing">0.5dp</dimen>
+    <dimen name="DP50">50dp</dimen>
+    <dimen name="DP20">20dp</dimen>
+    <dimen name="DP25">25dp</dimen>
+    <dimen name="DP45">45dp</dimen>
+    <dimen name="radio_left_right">3dp</dimen>
+    <dimen name="memberHeight">80dp</dimen>
+    <dimen name="navigationPadding">56dp</dimen>
+</resources>

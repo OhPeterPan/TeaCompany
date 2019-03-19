@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding12">
+
+    <ImageView
+        android:id="@+id/ivAdapterMessagePic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_person_pic" />
+
+    <TextView
+        android:id="@+id/tvAdapterMessageName"
+        style="@style/textCommentParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin15"
+        android:layout_toRightOf="@id/ivAdapterMessagePic"
+        android:text="郭俊涛" />
+
+    <TextView
+        android:id="@+id/tvAdapterMessageInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAdapterMessageName"
+        android:layout_marginLeft="@dimen/margin15"
+        android:layout_marginTop="@dimen/margin6"
+        android:layout_toRightOf="@id/ivAdapterMessagePic"
+        android:text="这里是商品的描述语"
+        android:textColor="@color/textHintColor"
+        android:textSize="@dimen/smallTextSize" />
+
+    <TextView
+        android:id="@+id/tvAdapterMessageTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="2019/01/02"
+        android:textColor="@color/textHintColor"
+        android:textSize="@dimen/smallTextSize" />
+</RelativeLayout>

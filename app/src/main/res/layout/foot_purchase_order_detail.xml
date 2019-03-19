@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llOrderDetailBottomGiftInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f1f1f1"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding12"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_background_frame_green"
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding3"
+            android:paddingLeft="@dimen/padding9"
+            android:paddingRight="@dimen/padding9"
+            android:paddingTop="@dimen/padding3"
+            android:text=" 赠品 "
+            android:textColor="@color/backgroundGreen"
+            android:textSize="@dimen/titleTextSize" />
+
+        <com.example.administrator.chadaodiancompany.view.GiftLinearLayout
+            android:id="@+id/llOrderDetailBottomGift"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:paddingBottom="@dimen/padding6"
+        android:paddingLeft="@dimen/padding12"
+        android:paddingRight="@dimen/padding12"
+        android:paddingTop="@dimen/padding12">
+
+        <TextView
+            style="@style/textCommentTransParent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="货品总价" />
+
+        <TextView
+            android:id="@+id/tvOrderDetailBottomTotal"
+            style="@style/textCommentTransParent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥ 00.00" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/padding6"
+        android:paddingLeft="@dimen/padding12"
+        android:paddingRight="@dimen/padding12"
+        android:paddingTop="@dimen/padding6">
+
+        <TextView
+            style="@style/textCommentTransParent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="物流运费" />
+
+        <TextView
+            android:id="@+id/tvExpressMoney"
+            style="@style/textCommentTransParent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="¥ 00.00" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llStoreFavourableMoney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/padding6"
+        android:paddingLeft="@dimen/padding12"
+        android:paddingRight="@dimen/padding12"
+        android:paddingTop="@dimen/padding6"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/textCommentTransParent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="店铺优惠" />
+
+        <TextView
+            android:id="@+id/tvStoreFavourableMoney"
+            style="@style/textCommentTransParent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="¥ 00.00" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/padding12"
+        android:paddingLeft="@dimen/padding12"
+        android:paddingRight="@dimen/padding12"
+        android:paddingTop="@dimen/padding6">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="实付款"
+            android:textColor="@color/textDarkColor"
+            android:textSize="@dimen/titleTextSize" />
+
+        <TextView
+            android:id="@+id/tvExtraMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="¥ 00.00"
+            android:textColor="@color/backgroundRed"
+            android:textSize="@dimen/titleTextSize" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvOrderDetailGoodPriceRemark"
+        style="@style/textCommentParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin1"
+        android:background="@android:color/white"
+        android:gravity="start"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="1.5dp"
+        android:paddingBottom="@dimen/padding9"
+        android:paddingLeft="@dimen/padding12"
+        android:paddingRight="@dimen/padding12"
+        android:paddingTop="@dimen/padding9"
+        android:textSize="12sp"
+        tools:text="备注原因" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="5dp" />
+
+    <TextView
+        android:id="@+id/tvPurchaseOrderDetailInfo"
+        style="@style/textCommentTransParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F8F8F8"
+        android:lineSpacingExtra="1.5dp"
+        android:paddingBottom="@dimen/padding6"
+        android:paddingLeft="@dimen/padding12"
+        android:paddingTop="@dimen/padding6"
+        tools:text="订货单号：00000000\n创建时间：2016-09-08\n付款时间：2016-09-08\n发货时间：2016-09-08" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="5dp" />
+</LinearLayout>

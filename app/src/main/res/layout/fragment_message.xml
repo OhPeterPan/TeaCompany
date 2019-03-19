@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cbHeadAllMessage"
+            style="@style/textCommentParent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableLeft="@drawable/check_select"
+            android:drawablePadding="@dimen/padding6"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:padding="@dimen/padding12"
+            android:text="全选" />
+
+        <TextView
+            android:id="@+id/tvMsgTable"
+            style="@style/textCommentParent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/ic_msg_tag"
+            android:drawablePadding="@dimen/padding6"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/padding12"
+            android:text="标记为已读" />
+
+        <TextView
+            android:id="@+id/tvMsgDel"
+            style="@style/textCommentParent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/common_del_pic"
+            android:drawablePadding="@dimen/padding6"
+            android:gravity="center_vertical"
+            android:text="删除" />
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="3dp"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

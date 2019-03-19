@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:divider="@drawable/shape_gray_line"
+    app:showDividers="middle">
+
+    <TextView
+        android:id="@+id/tvPurchaseOrderDetailState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:drawableLeft="@mipmap/purchase_order_state_pic"
+        android:drawablePadding="@dimen/padding10"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding12"
+        android:text="订单状态"
+        android:textColor="@color/textLightColor"
+        android:textSize="@dimen/titleTextSize" />
+
+    <TextView
+        android:id="@+id/tvHeadExpressInfo"
+        style="@style/textCommentParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:drawableLeft="@mipmap/express_pic"
+        android:drawablePadding="@dimen/padding9"
+        android:lineSpacingExtra="@dimen/margin3"
+        android:padding="@dimen/padding12"
+        android:text="物流：申通快递\n物流电话：15637467806"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rlHeadAddressInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="@dimen/padding12">
+
+        <ImageView
+            android:id="@+id/ivHeadAddressPic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/purchase_address_pic" />
+
+        <TextView
+            android:id="@+id/tvHeadAddressName"
+            style="@style/textCommentParent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin15"
+            android:layout_toRightOf="@+id/ivHeadAddressPic"
+            android:text="收货人" />
+
+        <TextView
+            android:id="@+id/tvHeadAddressPhone"
+            style="@style/textCommentParent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="156382738347" />
+
+        <TextView
+            android:id="@+id/tvHeadAddressAddress"
+            style="@style/textCommentParent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvHeadAddressName"
+            android:layout_marginLeft="@dimen/margin15"
+            android:layout_marginTop="@dimen/margin6"
+            android:layout_toRightOf="@+id/ivHeadAddressPic"
+            android:ellipsize="end"
+            android:lineSpacingExtra="1.5dp"
+            android:maxLines="2"
+            android:text="策划四是为了个那发个好的欧式风哈市的房间爱上对方客户说地方哈客户收到货" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvHeadInvoiceInfo"
+        style="@style/textCommentParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:lineSpacingExtra="@dimen/margin3"
+        android:padding="@dimen/padding12"
+        android:text="发票信息:\n发票的真正内容"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/llHeadOrderMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding12"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/textCommentParent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="买家留言:" />
+
+        <TextView
+            android:id="@+id/tvHeadOrderMsg"
+            style="@style/textCommentTransParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding6"
+            android:text="无" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+
+    <TextView
+        android:id="@+id/tvOrderDetailStoreName"
+        style="@style/textCommentParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:drawablePadding="@dimen/padding6"
+        android:padding="@dimen/padding12"
+        tools:text="八马茶业" />
+</android.support.v7.widget.LinearLayoutCompat>

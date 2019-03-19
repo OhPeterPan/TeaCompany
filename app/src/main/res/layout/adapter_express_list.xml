@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin1"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_0"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="35dp"
+        android:background="#A6A6A6"
+        app:layout_heightPercent="10%w" />
+
+    <ImageView
+        android:id="@+id/imageShapeGrayDrop"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_below="@+id/view_0"
+        android:layout_marginLeft="31dp"
+        android:src="@drawable/shape_gray_drop" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/imageShapeGrayDrop"
+        android:layout_marginLeft="35dp"
+        android:background="#A6A6A6"
+        app:layout_heightPercent="10%w" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/view_0"
+        android:orientation="vertical"
+        android:padding="@dimen/padding6">
+
+        <TextView
+            android:id="@+id/tvAdapterExpressInfo"
+            style="@style/textCommentParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="2dp"
+            android:text="需求提交成功" />
+
+        <TextView
+            android:id="@+id/tvAdapterExpressTime"
+            style="@style/textCommentTransParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvAdapterExpressInfo"
+            android:layout_marginTop="@dimen/margin3"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="2016-11-17  11:49" />
+    </LinearLayout>
+
+</com.zhy.android.percent.support.PercentRelativeLayout>

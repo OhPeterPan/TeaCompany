@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <TextView
+            android:id="@+id/tvAdapterOrderExpenses"
+            style="@style/textCommentTransParent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="运费：¥00" />
+
+        <TextView
+            android:id="@+id/tvAdapterOrderOrderAmount"
+            style="@style/textCommentTransParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:padding="15dp"
+            android:text="订单金额：1000" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/viewHeight" />
+
+    <include layout="@layout/layout_order_bottom_wait_pay" />
+
+    <include layout="@layout/layout_order_bottom_wait_send_good" />
+</LinearLayout>

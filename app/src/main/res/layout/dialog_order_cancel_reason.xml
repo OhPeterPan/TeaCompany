@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_white_circle_corner_dialog"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/textCommentParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:padding="@dimen/padding12"
+        android:text="取消缘由：" />
+
+    <RadioGroup
+        android:id="@+id/rgCancelOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="start"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rbCancelOrderReasonOne"
+            style="@style/textCommentParent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:checked="true"
+            android:drawableLeft="@drawable/check_select"
+            android:drawablePadding="@dimen/padding12"
+            android:includeFontPadding="false"
+            android:padding="@dimen/padding12"
+            android:text="无法备齐货物" />
+
+        <RadioButton
+            android:id="@+id/rbCancelOrderReasonTwo"
+            style="@style/textCommentParent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableLeft="@drawable/check_select"
+            android:drawablePadding="@dimen/padding12"
+            android:includeFontPadding="false"
+            android:padding="@dimen/padding12"
+            android:text="不是有效的订单" />
+
+        <RadioButton
+            android:id="@+id/rbCancelOrderReasonThree"
+            style="@style/textCommentParent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableLeft="@drawable/check_select"
+            android:drawablePadding="@dimen/padding12"
+            android:includeFontPadding="false"
+            android:padding="@dimen/padding12"
+            android:text="买家主动要求" />
+
+        <RadioButton
+            android:id="@+id/rbCancelOrderReasonFour"
+            style="@style/textCommentParent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableLeft="@drawable/check_select"
+            android:drawablePadding="@dimen/padding12"
+            android:includeFontPadding="false"
+            android:padding="@dimen/padding12"
+            android:text="其他原因" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorBackground" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvCancelOrderCancel"
+            style="@style/textCommentParent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:padding="@dimen/padding12"
+            android:text="取消" />
+
+        <TextView
+            android:id="@+id/tvCancelOrderConfirm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/backgroundRed"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:padding="@dimen/padding12"
+            android:text="确认"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/titleTextSize" />
+    </LinearLayout>
+</android.widget.LinearLayout>

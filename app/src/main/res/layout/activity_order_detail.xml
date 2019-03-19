@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/magicOrderDetail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btnHeight"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/white"
+        android:visibility="gone" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/viewHeight" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/viewHeight" />
+
+    <include layout="@layout/layout_order_bottom_wait_pay" />
+
+    <include layout="@layout/layout_order_bottom_wait_send_good" />
+</LinearLayout>

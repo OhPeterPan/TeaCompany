@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/rgOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbAllOrder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:padding="@dimen/padding12"
+            android:text="全部"
+            android:textColor="@color/color_indent"
+            android:textSize="@dimen/titleTextSize" />
+
+        <Space
+            android:layout_width="@dimen/viewHeight"
+            android:layout_height="match_parent" />
+
+        <RadioButton
+            android:id="@+id/rbWaitPayOrder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/padding12"
+            android:text="待付款"
+            android:textColor="@color/color_indent"
+            android:textSize="@dimen/titleTextSize" />
+
+        <Space
+            android:layout_width="@dimen/viewHeight"
+            android:layout_height="match_parent" />
+
+        <RadioButton
+            android:id="@+id/rbWaitSendOrder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:button="@null"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="@dimen/padding12"
+            android:text="待发货 V"
+            android:textColor="@color/color_indent"
+            android:textSize="@dimen/titleTextSize" />
+
+        <Space
+            android:layout_width="@dimen/viewHeight"
+            android:layout_height="match_parent" />
+
+        <RadioButton
+            android:id="@+id/rbSendingOrder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/padding12"
+            android:text="已发货"
+            android:textColor="@color/color_indent"
+            android:textSize="@dimen/titleTextSize" />
+
+        <Space
+            android:layout_width="@dimen/viewHeight"
+            android:layout_height="match_parent" />
+
+        <RadioButton
+            android:id="@+id/rbFinishOrder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/padding12"
+            android:text="已完成"
+            android:textColor="@color/color_indent"
+            android:textSize="@dimen/titleTextSize" />
+    </RadioGroup>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin3" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    app:divider="@drawable/shape_gray_line"
+    app:showDividers="middle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/textCommentParent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding12"
+            android:text="收货人：" />
+
+        <EditText
+            android:id="@+id/etAddressManagerUserName"
+            style="@style/SearchEditTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center_vertical|right"
+            android:lines="1"
+            android:paddingRight="@dimen/padding6"
+            tools:text="那些年那些事" />
+
+        <ImageView
+            android:id="@+id/ivClearAddressManagerUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/padding6"
+            android:paddingRight="@dimen/padding6"
+            android:src="@mipmap/del_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/textCommentParent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding12"
+            android:text="联系电话：" />
+
+        <EditText
+            android:id="@+id/etAddressManagerUserPhone"
+            style="@style/SearchEditTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center_vertical|right"
+            android:inputType="phone"
+            android:lines="1"
+            android:paddingRight="@dimen/padding6"
+            tools:text="12345678" />
+
+        <ImageView
+            android:id="@+id/ivClearAddressManagerUserPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/padding6"
+            android:paddingRight="@dimen/padding6"
+            android:src="@mipmap/del_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/textCommentParent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding12"
+            android:text="公司名称：" />
+
+        <EditText
+            android:id="@+id/etAddressManagerCompany"
+            style="@style/SearchEditTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center_vertical|right"
+            android:lines="1"
+            android:paddingRight="@dimen/padding6"
+            tools:text="12345678" />
+
+        <ImageView
+            android:id="@+id/ivClearAddressManagerCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/padding6"
+            android:paddingRight="@dimen/padding6"
+            android:src="@mipmap/del_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/textCommentParent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding12"
+            android:text="收货地区：" />
+
+        <TextView
+            android:id="@+id/tvAddressManagerChoose"
+            style="@style/textCommentParent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/padding6"
+            android:drawableRight="@mipmap/yellow_arrows"
+            android:gravity="right|center_vertical"
+            android:paddingRight="@dimen/padding12"
+            android:text="请选择"
+            android:textColor="@color/textHintColor" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center_vertical">
+
+        <TextView
+            style="@style/textCommentParent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding12"
+            android:text="详细地址：" />
+
+        <EditText
+            android:id="@+id/etAddressManagerAddressInfo"
+            style="@style/SearchEditTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center_vertical|right"
+            android:maxLines="2"
+            android:paddingRight="40dp"
+            android:textColor="@color/textHintColor"
+            tools:text="那些年那些事" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/padding3"
+        android:paddingLeft="@dimen/padding12"
+        android:paddingRight="@dimen/padding12"
+        android:paddingTop="@dimen/padding3">
+
+        <TextView
+            style="@style/textCommentParent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="默认使用改地址" />
+
+        <com.suke.widget.SwitchButton
+            android:id="@+id/switchAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:sb_checked="false"
+            app:sb_checked_color="@color/backgroundRed"
+            app:sb_enable_effect="false"
+            app:sb_shadow_effect="false"
+            app:sb_shadow_radius="@dimen/margin3"
+            app:sb_show_indicator="false" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvAddressSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin12"
+        android:background="@drawable/shape_background_red"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:padding="@dimen/padding12"
+        android:text="保存"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/titleTextSize" />
+</android.support.v7.widget.LinearLayoutCompat>

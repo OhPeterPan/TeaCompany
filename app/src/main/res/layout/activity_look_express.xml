@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding9">
+
+        <ImageView
+            android:id="@+id/ivExpressGoodPic"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/image_loading" />
+
+        <TextView
+            android:id="@+id/tvExpressDetail"
+            style="@style/textCommentParent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="@dimen/margin3"
+            android:paddingLeft="@dimen/padding6"
+            tools:text="物流状态：\n物流公司：\n运单号码：" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin3"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+</android.support.v7.widget.LinearLayoutCompat>

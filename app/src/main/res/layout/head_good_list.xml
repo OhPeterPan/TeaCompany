@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:id="@+id/llHeadGoodDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/tvHeadGoodClassify"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/padding6"
+            android:drawableTop="@drawable/ic_good_classify"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:padding="@dimen/padding15"
+            android:text="分类"
+            android:textColor="@color/textDarkColor"
+            android:textSize="@dimen/titleTextSize"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvHeadGoodSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/padding6"
+            android:drawableTop="@drawable/ic_good_search"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:padding="@dimen/padding15"
+            android:text="搜索"
+            android:textColor="@color/textDarkColor"
+            android:textSize="@dimen/titleTextSize"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+    <CheckBox
+        android:id="@+id/cbHeadAllGood"
+        style="@style/textCommentParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:drawableLeft="@drawable/check_select"
+        android:drawablePadding="@dimen/padding6"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:padding="@dimen/padding12"
+        android:text="全选"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llHeadGoodDetail" />
+
+    <TextView
+        android:id="@+id/tvHeadGoodBan"
+        style="@style/textCommentParent"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="right"
+        android:drawableLeft="@mipmap/ic_undercarriage"
+        android:drawablePadding="@dimen/padding6"
+        android:drawableTint="#e98125"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:paddingLeft="@dimen/padding12"
+        android:paddingRight="@dimen/padding12"
+        android:text="下架"
+        app:layout_constraintBottom_toBottomOf="@id/cbHeadAllGood"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llHeadGoodDetail" />
+
+</android.support.constraint.ConstraintLayout>

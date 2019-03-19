@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tvAdapterSellDetail"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:text="00"
+    android:textColor="@color/textDarkColor"
+    android:textSize="@dimen/titleTextSize" />
