@@ -22,6 +22,12 @@ public class FilterBottomDialog extends BottomSheetDialog implements View.OnClic
     TextView tvFilterDialogOutTable;
     @BindView(R.id.tvFilterDialogCancel)
     TextView tvFilterDialogCancel;
+    @BindView(R.id.tvFilterDialogMemberGrade)
+    TextView tvFilterDialogMemberGrade;
+    @BindView(R.id.tvFilterDialogMemberAudit)
+    TextView tvFilterDialogMemberAudit;
+    @BindView(R.id.tvFilterDialogMemberSetting)
+    TextView tvFilterDialogMemberSetting;
     private OnChooseMemberListener listener;
 
     public FilterBottomDialog(@NonNull Context context) {
@@ -44,6 +50,10 @@ public class FilterBottomDialog extends BottomSheetDialog implements View.OnClic
         tvFilterDialogOutTable.setOnClickListener(this);
 
         tvFilterDialogCancel.setOnClickListener(this);
+
+        tvFilterDialogMemberGrade.setOnClickListener(this);
+        tvFilterDialogMemberAudit.setOnClickListener(this);
+        tvFilterDialogMemberSetting.setOnClickListener(this);
     }
 
     public void setOnChooseMemberStateListener(OnChooseMemberListener listener) {
@@ -65,13 +75,22 @@ public class FilterBottomDialog extends BottomSheetDialog implements View.OnClic
             case R.id.tvFilterDialogOutTable://导出会员表
                 listener.chooseMemberStateListener(2);
                 break;
+            case R.id.tvFilterDialogMemberGrade://会员等级
+                listener.chooseMemberStateListener(3);
+                break;
+            case R.id.tvFilterDialogMemberAudit://会员审核
+                listener.chooseMemberStateListener(4);
+                break;
+            case R.id.tvFilterDialogMemberSetting://会员设置
+                listener.chooseMemberStateListener(5);
+                break;
         }
         dismiss();
     }
 
     public interface OnChooseMemberListener {
         /**
-         * @param tag 0会员搜索 1新增会员 2导出会员表
+         * @param tag 0会员搜索 1新增会员 2导出会员表 3会员等级 4会员审核 5会员设置
          */
         void chooseMemberStateListener(int tag);
     }

@@ -5,7 +5,7 @@
     android:layout_height="wrap_content">
 
     <LinearLayout
-        android:id="@+id/layout_back"
+        android:id="@id/layout_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:descendantFocusability="blocksDescendants"
@@ -20,8 +20,8 @@
             android:drawablePadding="2dp"
             android:gravity="center"
             android:paddingLeft="@dimen/padding12"
-            android:paddingTop="@dimen/padding6"
-            android:paddingRight="@dimen/padding12"
+            android:paddingTop="@dimen/padding10"
+            android:paddingRight="@dimen/padding10"
             android:paddingBottom="@dimen/padding6"
             android:text="编辑"
             android:textColor="@android:color/white"
@@ -36,9 +36,9 @@
             android:drawablePadding="2dp"
             android:gravity="center"
             android:paddingLeft="@dimen/padding12"
-            android:paddingTop="@dimen/padding6"
+            android:paddingTop="@dimen/padding10"
             android:paddingRight="@dimen/padding12"
-            android:paddingBottom="@dimen/padding6"
+            android:paddingBottom="@dimen/padding10"
             android:text="删除"
             android:textColor="@android:color/white"
             android:textSize="13sp" />
@@ -46,7 +46,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/layout_front"
+        android:id="@id/layout_front"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"

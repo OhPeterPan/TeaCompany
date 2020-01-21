@@ -10,19 +10,33 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.alibaba.fastjson.JSON;
+import com.blankj.utilcode.util.LogUtils;
+import com.blankj.utilcode.util.NetworkUtils;
+import com.blankj.utilcode.util.StringUtils;
+import com.blankj.utilcode.util.ToastUtils;
+import com.example.administrator.chadaodiancompany.NetDialog;
 import com.example.administrator.chadaodiancompany.R;
+import com.example.administrator.chadaodiancompany.bean.PayMethodBean;
+import com.example.administrator.chadaodiancompany.bean.PayMethodBean.PayMethodData.PayMethodListBean;
 import com.example.administrator.chadaodiancompany.popupWindow.ChooseMoneyMethodPopupWindow;
+import com.example.administrator.chadaodiancompany.presenter.ConfirmMoneyPresenter;
 import com.example.administrator.chadaodiancompany.util.CommonUtil;
+import com.example.administrator.chadaodiancompany.util.LogUtil;
+import com.example.administrator.chadaodiancompany.util.SpUtil;
 import com.example.administrator.chadaodiancompany.util.TimeUtil;
+import com.example.administrator.chadaodiancompany.util.ToastUtil;
 import com.example.administrator.chadaodiancompany.view.TeaPickView;
+import com.example.administrator.chadaodiancompany.viewImpl.IConfirmMoneyView;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class ConfirmMoneyActivity extends AppCompatActivity implements View.OnClickListener, TeaPickView.ISelectPickViewTimeListener {
+public class ConfirmMoneyActivity extends AppCompatActivity implements View.OnClickListener, TeaPickView.ISelectPickViewTimeListener, IConfirmMoneyView, ChooseMoneyMethodPopupWindow.IOnChoosePayMethodListener {
 
     public static final int REQUEST_CODE = 0x001;
     public static final int RESULT_CODE = 0x002;
@@ -37,6 +51,12 @@ public class ConfirmMoneyActivity extends AppCompatActivity implements View.OnCl
     @BindView(R.id.tvConfirmGetMoney)
     TextView tvConfirmGetMoney;
     private TeaPickView teaPickView;
+    private ConfirmMoneyPresenter presenter;
+    private NetDialog netDialog;
+    private List<PayMethodListBean> list;
+    private ChooseMoneyMethodPopupWindow popupWindow;
+    private String payCode;
+    private String time = TimeUtil.getNowTime(TimeUtil.YEAR_MONTH_DAY);
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -45,10 +65,51 @@ public class ConfirmMoneyActivity extends AppCompatActivity implements View.OnCl
         ButterKnife.bind(this);
         initView();
         initListener();
+        initData();
+    }
+
+    @Override
+    public void showLoading() {
+        if (NetworkUtils.isConnected()) {
+            if (netDialog != null && !netDialog.isShowing()) {
+                netDialog.show();
+            }
+        } else {
+            ToastUtils.showShort("网络连接失败，请检查网络是否连接！");
+        }
+    }
+
+    @Override
+    public void hideLoading() {
+        if (netDialog != null && netDialog.isShowing()) {
+            netDialog.dismiss();
+        }
+    }
+
+    @Override
+    public void showError(Throwable throwable) {
+        LogUtils.eTag("wak", throwable);
+        LogUtil.logI("错误了？");
+    }
+
+    private void initData() {
+        netDialog = new NetDialog(this);
+        presenter = new ConfirmMoneyPresenter(this);
+        presenter.sendNet(getKey());
+    }
+
+    @Override
+    public void getPayMethodResult(String result) {
+        PayMethodBean payMethodBean = JSON.parseObject(result, PayMethodBean.class);
+        list = payMethodBean.datas.list;
+    }
+
+    private String getKey() {
+        return SpUtil.getString(SpUtil.KEY, "");
     }
 
     private void initView() {
-        tvDialogChooseCalendar.setText(TimeUtil.getNowTime(TimeUtil.YEAR_MONTH_DAY));
+        tvDialogChooseCalendar.setText(time);
     }
 
     private void initListener() {
@@ -65,8 +126,8 @@ public class ConfirmMoneyActivity extends AppCompatActivity implements View.OnCl
                 finish();
                 break;
             case R.id.tvConfirmGetMoney://确定
-                setResult(RESULT_CODE);
-                finish();
+                confirmGetPay();
+
                 break;
             case R.id.tvDialogChooseCalendar://选择日期
                 showTimeDialog();
@@ -77,9 +138,34 @@ public class ConfirmMoneyActivity extends AppCompatActivity implements View.OnCl
         }
     }
 
+    private void confirmGetPay() {
+        String remark = etDialogPayCodeOrRemark.getText().toString().trim();
+        if (StringUtils.isEmpty(remark)) {
+            ToastUtil.showError("请输入备注！");
+            return;
+        }
+        presenter.sendNetPay(getKey(), time, payCode, remark);
+    }
+
+    @Override
+    public void confirmPayResult(String result) {
+        ToastUtil.showSuccess("确认收款成功！");
+        setResult(RESULT_CODE);
+        finish();
+    }
+
     private void showPayMethodPopupWindow() {
-        ChooseMoneyMethodPopupWindow popupWindow = new ChooseMoneyMethodPopupWindow(this);
+        if (popupWindow == null) {
+            popupWindow = new ChooseMoneyMethodPopupWindow(this, list);
+            popupWindow.setOnGradeListener(this);
+        }
         popupWindow.show(tvDialogChoosePayMethod);
+    }
+
+    @Override
+    public void getPayMethodListener(PayMethodListBean bean) {
+        this.payCode = bean.payment_code;
+        tvDialogChoosePayMethod.setText(bean.payment_name);
     }
 
     private void showTimeDialog() {
@@ -95,6 +181,7 @@ public class ConfirmMoneyActivity extends AppCompatActivity implements View.OnCl
 
     @Override
     public void selectTimeListener(Date date, View v) {
+        time = TimeUtil.date2String(date, TimeUtil.YEAR_MONTH_DAY);
         tvDialogChooseCalendar.setText(TimeUtil.date2String(date, TimeUtil.YEAR_MONTH_DAY));
     }
 
@@ -115,4 +202,6 @@ public class ConfirmMoneyActivity extends AppCompatActivity implements View.OnCl
         intent.putExtra(CommonUtil.ORDER_ID, orderId);
         frag.startActivityForResult(intent, REQUEST_CODE);
     }
+
+
 }

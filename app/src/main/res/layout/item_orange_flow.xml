@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tvItemGrayRange"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:background="@drawable/shape_orange_ground"
+    android:ellipsize="end"
+    android:gravity="center"
+    android:includeFontPadding="false"
+    android:maxLines="1"
+    android:paddingLeft="@dimen/padding12"
+    android:paddingTop="@dimen/padding6"
+    android:paddingRight="@dimen/padding12"
+    android:paddingBottom="@dimen/padding6"
+    android:textColor="@color/white"
+    android:textSize="@dimen/titleTextSize" />

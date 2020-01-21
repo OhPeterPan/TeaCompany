@@ -27,7 +27,7 @@ public class OrderDetailAdapter extends BaseQuickAdapter<OrderGoodBean, BaseView
         holder.setText(R.id.ivAdapterOrderGoodsPrice, NumberUtil.getCurrency(Float.valueOf(StringUtils.isEmpty(orderGoods.goods_price) ? "0.00" : orderGoods.goods_price)));
         holder.setText(R.id.ivAdapterOrderGoodsName, orderGoods.goods_name);
         holder.setText(R.id.ivAdapterOrderGoodsNumber, "X " + orderGoods.goods_num);
-        if (StringUtils.isEmpty(orderGoods.deliver_num)) {
+        if (StringUtils.isEmpty(orderGoods.deliver_num) || orderGoods.num == 1) {
             holder.setGone(R.id.ivAdapterSendOrderGoodsState, false);
         } else {
             holder.setGone(R.id.ivAdapterSendOrderGoodsState, true);

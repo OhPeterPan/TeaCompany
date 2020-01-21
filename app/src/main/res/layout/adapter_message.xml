@@ -2,13 +2,23 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="@dimen/padding12">
+    android:paddingTop="@dimen/padding12"
+    android:paddingRight="@dimen/padding12"
+    android:paddingBottom="@dimen/padding12">
+
+    <ImageView
+        android:id="@+id/ivDrop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_drop" />
 
     <ImageView
         android:id="@+id/ivAdapterMessagePic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/ivDrop"
         android:src="@drawable/ic_person_pic" />
 
     <TextView
@@ -28,6 +38,8 @@
         android:layout_marginLeft="@dimen/margin15"
         android:layout_marginTop="@dimen/margin6"
         android:layout_toRightOf="@id/ivAdapterMessagePic"
+        android:ellipsize="end"
+        android:maxLines="1"
         android:text="这里是商品的描述语"
         android:textColor="@color/textHintColor"
         android:textSize="@dimen/smallTextSize" />

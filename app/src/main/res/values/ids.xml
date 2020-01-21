@@ -7,4 +7,8 @@
     <item name="tvNoData" type="id" />
     <item name="flNoData" type="id" />
     <item name="rootView" type="id" />
+    <item name="tvSwipeDel" type="id" />
+    <item name="tvSwipeEdit" type="id" />
+    <item name="layout_back" type="id" />
+    <item name="layout_front" type="id" />
 </resources>

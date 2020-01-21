@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin1"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tvAdapterSingleGoodTime"
+        style="@style/textCommentParent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="@dimen/padding12"
+        tools:text="时间" />
+
+    <TextView
+        android:id="@+id/tvAdapterSingleGoodMember"
+        style="@style/textCommentParent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="@dimen/padding12"
+        tools:text="下单会员" />
+
+    <TextView
+        android:id="@+id/tvAdapterSingleGoodNum"
+        style="@style/textCommentParent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="@dimen/padding12"
+        tools:text="数量" />
+
+    <TextView
+        android:id="@+id/tvAdapterSingleGoodMoney"
+        style="@style/textCommentParent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="@dimen/padding12"
+        tools:text="金额" />
+</LinearLayout>

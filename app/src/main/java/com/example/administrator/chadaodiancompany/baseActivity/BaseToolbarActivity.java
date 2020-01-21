@@ -43,6 +43,7 @@ public abstract class BaseToolbarActivity<T extends BasePresenter> extends AppCo
     protected String storeName;
     public TextView tvTitleRight;
     public View baseView;
+    private View emptyView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -54,7 +55,7 @@ public abstract class BaseToolbarActivity<T extends BasePresenter> extends AppCo
         initFrameView();
     }
 
-    private void setStateBar() {
+    public void setStateBar() {
         ImmersionBar.with(this)
                 .fitsSystemWindows(true)
                 .statusBarColor(R.color.white)
@@ -98,6 +99,13 @@ public abstract class BaseToolbarActivity<T extends BasePresenter> extends AppCo
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle("");
         actionBar.setDisplayHomeAsUpEnabled(true);
+    }
+
+    protected void initToolbar(boolean show) {
+        setSupportActionBar(toolbar);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("");
+        actionBar.setDisplayHomeAsUpEnabled(show);
     }
 
     private void clearAllView() {
@@ -154,6 +162,15 @@ public abstract class BaseToolbarActivity<T extends BasePresenter> extends AppCo
     public void launchActivity(Class<? extends AppCompatActivity> clazz) {
         Intent intent = new Intent(context, clazz);
         startActivity(intent);
+    }
+
+    public View getEmptyView(String msg) {
+
+        View emptyView = LayoutInflater.from(this).inflate(R.layout.layout_empty, null);
+        TextView tvNoData = emptyView.findViewById(R.id.tvNoData);
+        tvNoData.setText(msg);
+
+        return emptyView;
     }
 
     //解决fragment崩溃重影问题

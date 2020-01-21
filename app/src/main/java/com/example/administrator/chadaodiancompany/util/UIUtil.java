@@ -43,6 +43,7 @@ public class UIUtil {
     public static String[] getStringArray(int resId) {
         return getResources().getStringArray(resId);
     }
+
     public static void setData(TextView tv, String data) {
         if (StringUtils.isEmpty(data)) {
             tv.setText("无");

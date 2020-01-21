@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding12">
+
+    <ImageView
+        android:id="@+id/adapterIvAuditPic"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/adapterTvAuditTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/textLightColor"
+        android:textSize="@dimen/smallTextSize"
+        tools:text="12:00" />
+
+    <TextView
+        android:id="@+id/adapterTvAuditName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin6"
+        android:layout_marginRight="@dimen/margin6"
+        android:layout_toLeftOf="@id/adapterTvAuditTime"
+        android:layout_toRightOf="@id/adapterIvAuditPic"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#0c0c0c"
+        android:textSize="@dimen/titleTextSize"
+        tools:text="你嘎哈升达高考发送卡的股份卡斯柯放空管has发" />
+
+    <TextView
+        android:id="@+id/adapterTvAuditInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/adapterIvAuditPic"
+        android:layout_marginLeft="@dimen/margin6"
+        android:layout_toRightOf="@id/adapterIvAuditPic"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/textLightColor"
+        android:textSize="@dimen/titleTextSize"
+        tools:text="你嘎哈升达高考发送卡的股份卡斯柯放空管has发" />
+</RelativeLayout>

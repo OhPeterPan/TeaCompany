@@ -52,8 +52,6 @@ public class GoodSearchActivity extends BaseToolbarActivity implements View.OnCl
     protected void initData() {
         Intent intent = getIntent();
         flag = intent.getIntExtra(CommonUtil.FLAG, 0);
-  /*      ivActRightSetting.setVisibility(View.GONE);
-        tvActTitle.setText("搜索");*/
         toolbar.setVisibility(View.GONE);
         baseView.setVisibility(View.GONE);
         if (flag == 1) {

@@ -23,18 +23,31 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             android:src="@drawable/ic_expression_pic" />
 
-        <com.example.administrator.chadaodiancompany.view.ImageEditText
-            android:id="@+id/etInteractInfo"
-            style="@style/EditTextStyle"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/ic_shadow_corner_back_ground"
-            android:drawableRight="@drawable/ic_msg_send_pic"
-            android:gravity="center_vertical"
-            android:paddingTop="10dp"
-            android:paddingRight="20dp"
-            android:paddingBottom="16dp" />
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/etInteractInfo"
+                style="@style/SearchEditTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding6" />
+
+            <ImageView
+                android:id="@+id/ivSendInteractInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_msg_send_pic" />
+        </LinearLayout>
+
+
     </LinearLayout>
 </LinearLayout>

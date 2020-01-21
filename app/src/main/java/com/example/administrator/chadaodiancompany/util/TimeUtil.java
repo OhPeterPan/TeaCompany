@@ -19,6 +19,7 @@ public class TimeUtil {
     public static final int DEFAULT_BUTTON = 2;//button可以点击间隔时间，有效防止多按导致重复打开界面
     public static final DateFormat DEFAULT_FORMAT = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     public static final DateFormat DEFAULT_FORMAT_NO_SECOND = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+    public static final DateFormat DEFAULT_ALL_FORMAT = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     public static final DateFormat DEFAULT_FORMAT_CHINA = new SimpleDateFormat("yyyy年MM月dd日HH时mm分ss秒");
     public static final DateFormat YEAR_MONTH_DAY = new SimpleDateFormat("yyyy-MM-dd");
     public static final DateFormat YEAR_MONTH = new SimpleDateFormat("yyyy-MM");

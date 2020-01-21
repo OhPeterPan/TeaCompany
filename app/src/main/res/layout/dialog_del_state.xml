@@ -3,14 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/white"
+    android:gravity="center"
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/tvDelDialogInfo"
         style="@style/textCommentParent"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:gravity="center_vertical"
         android:paddingTop="@dimen/DP45"
         android:paddingBottom="@dimen/DP45"
         android:text="确认删除该会员？" />

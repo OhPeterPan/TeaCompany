@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvSingleGoodsAnalyseTime"
+        style="@style/textCommentTransParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:drawableRight="@drawable/ic_calendar_pic"
+        android:gravity="center"
+        android:padding="@dimen/padding12"
+        tools:text="2018-07-01~2018-08-02" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin6"
+        android:layout_marginBottom="@dimen/margin1"
+        android:background="@color/white"
+        android:padding="@dimen/padding12">
+
+        <ImageView
+            android:id="@+id/ivSingleGoodsAnalysePic"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tvSingleGoodsName"
+            style="@style/textCommentParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin12"
+            android:layout_toRightOf="@id/ivSingleGoodsAnalysePic"
+            tools:text="ahskdkashdfkasdfasdkhfhaskd" />
+
+        <TextView
+            android:id="@+id/tvSingleGoodsVolume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/ivSingleGoodsAnalysePic"
+            android:layout_marginLeft="@dimen/margin12"
+            android:layout_toRightOf="@id/ivSingleGoodsAnalysePic"
+            android:textColor="@color/titleRightColor"
+            android:textSize="@dimen/titleTextSize"
+            tools:text="销量：" />
+
+        <TextView
+            android:id="@+id/tvSingleGoodsAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/ivSingleGoodsAnalysePic"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/margin12"
+            android:textColor="@color/titleRightColor"
+            android:textSize="@dimen/titleTextSize"
+            tools:text="销售额：" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:paddingTop="5dp" />
+</LinearLayout>

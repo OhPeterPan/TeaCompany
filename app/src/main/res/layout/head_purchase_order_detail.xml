@@ -32,6 +32,7 @@
         android:lineSpacingExtra="@dimen/margin3"
         android:padding="@dimen/padding12"
         android:text="物流：申通快递\n物流电话：15637467806"
+        android:textIsSelectable="true"
         android:visibility="gone" />
 
     <RelativeLayout
@@ -56,7 +57,11 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin15"
             android:layout_toRightOf="@+id/ivHeadAddressPic"
-            android:text="收货人" />
+            android:enabled="true"
+            android:focusable="true"
+            android:longClickable="true"
+            android:text="收货人"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/tvHeadAddressPhone"
@@ -64,7 +69,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:text="156382738347" />
+            android:enabled="true"
+            android:focusable="true"
+            android:longClickable="true"
+            android:text="156382738347"
+            android:textIsSelectable="true" />
 
         <TextView
             android:id="@+id/tvHeadAddressAddress"
@@ -76,9 +85,13 @@
             android:layout_marginTop="@dimen/margin6"
             android:layout_toRightOf="@+id/ivHeadAddressPic"
             android:ellipsize="end"
+            android:enabled="true"
+            android:focusable="true"
             android:lineSpacingExtra="1.5dp"
+            android:longClickable="true"
             android:maxLines="2"
-            android:text="策划四是为了个那发个好的欧式风哈市的房间爱上对方客户说地方哈客户收到货" />
+            android:text="策划四是为了个那发个好的欧式风哈市的房间爱上对方客户说地方哈客户收到货"
+            android:textIsSelectable="true" />
     </RelativeLayout>
 
     <TextView

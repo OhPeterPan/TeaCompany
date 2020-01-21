@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvGoodsAnalyseDetailTime"
+        style="@style/textCommentTransParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:drawableRight="@drawable/ic_calendar_pic"
+        android:gravity="center"
+        android:padding="@dimen/padding12"
+        tools:text="2018-07-01~2018-08-02" />
+
+    <RadioGroup
+        android:id="@+id/rgGoodsAnalyseState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/padding9"
+        android:paddingBottom="@dimen/padding9">
+
+        <RadioButton
+            android:id="@+id/rbGoodsAnalyseSalesVolume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin15"
+            android:background="@drawable/select_analyse_state"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="按销量排行"
+            android:textColor="@color/color_good_analyse"
+            android:textSize="@dimen/smallTextSize" />
+
+        <RadioButton
+            android:id="@+id/rbGoodsAnalyseSalesAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin15"
+            android:background="@drawable/select_analyse_state"
+            android:button="@null"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="按销售额排行"
+            android:textColor="@color/color_good_analyse"
+            android:textSize="@dimen/smallTextSize" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding12">
+
+        <TextView
+            android:id="@+id/tvGoodAnalyseTotal"
+            style="@style/textCommentParent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="总计" />
+
+        <TextView
+            android:id="@+id/tvGoodAnalyseCompare"
+            style="@style/textCommentParent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/select_statistic_sell"
+            android:drawablePadding="@dimen/padding3"
+            android:gravity="right"
+            android:text="销售数量" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin1"
+        android:overScrollMode="never" />
+</LinearLayout>

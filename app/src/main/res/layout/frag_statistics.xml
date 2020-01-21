@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -32,9 +33,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:button="@null"
+                android:checked="true"
                 android:gravity="center"
                 android:padding="@dimen/padding12"
-                android:text="7天"
+                android:text="6天"
                 android:textColor="@color/white"
                 android:textSize="@dimen/titleTextSize" />
 
@@ -64,12 +66,14 @@
         </RadioGroup>
 
         <FrameLayout
+            android:id="@+id/flStatistic"
             android:layout_width="match_parent"
             android:layout_height="260dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin6"
             android:orientation="horizontal">
 
             <TextView
@@ -78,10 +82,11 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
+                android:lineSpacingExtra="3dp"
                 android:paddingBottom="12dp"
-                android:text="7天营收"
                 android:textColor="@color/white"
-                android:textSize="@dimen/titleTextSize" />
+                android:textSize="@dimen/homeBottomTextSize"
+                tools:text="7天营收" />
 
             <View
                 android:layout_width="1dp"
@@ -95,10 +100,11 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
+                android:lineSpacingExtra="3dp"
                 android:paddingBottom="12dp"
-                android:text="单日最高"
                 android:textColor="@color/white"
-                android:textSize="@dimen/titleTextSize" />
+                android:textSize="@dimen/homeBottomTextSize"
+                tools:text="单日最高" />
 
             <View
                 android:layout_width="1dp"
@@ -112,10 +118,11 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
+                android:lineSpacingExtra="3dp"
                 android:paddingBottom="12dp"
-                android:text="日均"
                 android:textColor="@color/white"
-                android:textSize="@dimen/titleTextSize" />
+                android:textSize="@dimen/homeBottomTextSize"
+                tools:text="日均" />
         </LinearLayout>
     </LinearLayout>
 

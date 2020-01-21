@@ -23,10 +23,10 @@ public class OrderGoodBean implements Parcelable {
     public String owe_deliver_num;
     public String goods_image;
     public String send_num = "0";
+    public int num;
 
     public OrderGoodBean() {
     }
-
 
     protected OrderGoodBean(Parcel in) {
         rec_id = in.readString();
@@ -39,6 +39,7 @@ public class OrderGoodBean implements Parcelable {
         owe_deliver_num = in.readString();
         goods_image = in.readString();
         send_num = in.readString();
+        num = in.readInt();
     }
 
     public static final Creator<OrderGoodBean> CREATOR = new Creator<OrderGoodBean>() {
@@ -70,5 +71,6 @@ public class OrderGoodBean implements Parcelable {
         dest.writeString(owe_deliver_num);
         dest.writeString(goods_image);
         dest.writeString(send_num);
+        dest.writeInt(num);
     }
 }

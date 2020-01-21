@@ -15,10 +15,11 @@
 
     <TextView
         android:id="@+id/tvDialogMsgInfo"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginTop="@dimen/margin15"
-        android:gravity="center"
+        android:gravity="left"
         android:lineSpacingExtra="2dp"
         android:text="这里是消息的详情"
         android:textColor="@color/textHintColor"

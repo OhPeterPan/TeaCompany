@@ -40,6 +40,42 @@
         android:textColor="#d35410"
         android:textSize="13sp" />
 
+    <TextView
+        android:id="@+id/tvFilterDialogMemberGrade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/select_member_filter_drawable"
+        android:gravity="center"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:text="会员等级"
+        android:textColor="#d35410"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tvFilterDialogMemberAudit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/select_member_filter_drawable"
+        android:gravity="center"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:text="会员审核"
+        android:textColor="#d35410"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tvFilterDialogMemberSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/select_member_filter_drawable"
+        android:gravity="center"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:text="会员设置"
+        android:textColor="#d35410"
+        android:textSize="13sp" />
+
     <Space
         android:layout_width="match_parent"
         android:layout_height="3dp" />

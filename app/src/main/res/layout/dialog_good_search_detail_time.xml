@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#44000000"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/rgDefaultTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/colorBackground"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding6">
+
+            <RadioButton
+                android:id="@+id/rbOneWeek"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin20"
+                android:layout_weight="1"
+                android:background="@drawable/select_white_red"
+                android:button="@null"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:padding="@dimen/padding12"
+                android:text="近一周"
+                android:textColor="@color/color_gray_white"
+                android:textSize="@dimen/smallTextSize" />
+
+            <RadioButton
+                android:id="@+id/rbOneMonth"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/select_white_red"
+                android:button="@null"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:padding="@dimen/padding12"
+                android:text="近一月"
+                android:textColor="@color/color_gray_white"
+                android:textSize="@dimen/smallTextSize" />
+
+            <RadioButton
+                android:id="@+id/rbThreeMonth"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin20"
+                android:layout_weight="1"
+                android:background="@drawable/select_white_red"
+                android:button="@null"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:padding="@dimen/padding12"
+                android:text="近三月"
+                android:textColor="@color/color_gray_white"
+                android:textSize="@dimen/smallTextSize" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/padding15">
+
+            <TextView
+                style="@style/textCommentParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:padding="@dimen/padding12"
+                android:text="自定义时间查询"
+                android:textSize="@dimen/homeBottomTextSize" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/dialogStartTime"
+                    style="@style/textCommentParent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_gray_line"
+                    android:drawableLeft="@drawable/dialog_date_pic"
+                    android:drawablePadding="@dimen/padding6"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:padding="@dimen/padding6"
+                    android:text="2018-01-01" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/single_allow" />
+
+                <TextView
+                    android:id="@+id/dialogEndTime"
+                    style="@style/textCommentParent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_gray_line"
+                    android:drawableLeft="@drawable/dialog_date_pic"
+                    android:drawablePadding="@dimen/padding6"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:padding="@dimen/padding6"
+                    android:text="2018-12-30" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin9"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/dialogExport"
+                    style="@style/textCommentParent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginRight="@dimen/margin6"
+                    android:background="@drawable/shape_grade_input"
+                    android:includeFontPadding="false"
+                    android:visibility="gone"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="@dimen/padding6"
+                    android:paddingRight="40dp"
+                    android:paddingBottom="@dimen/padding6"
+                    android:text="导出" />
+
+                <TextView
+                    android:id="@+id/dialogTimeQuery"
+                    style="@style/textCommentParent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/margin6"
+                    android:background="@drawable/shape_grade_input"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="40dp"
+                    android:paddingTop="@dimen/padding6"
+                    android:paddingRight="40dp"
+                    android:paddingBottom="@dimen/padding6"
+                    android:text="查询" />
+            </LinearLayout>
+
+
+            <TextView
+                style="@style/textCommentParent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin20"
+                android:includeFontPadding="false"
+                android:text="提示：查询跨度不超过一年"
+                android:textSize="@dimen/homeBottomTextSize" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

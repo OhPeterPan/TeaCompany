@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding6">
+
+    <TextView
+        android:id="@+id/tvAdapterReceiverTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape_gray_corner"
+        android:paddingLeft="@dimen/padding12"
+        android:paddingTop="@dimen/padding3"
+        android:paddingRight="@dimen/padding12"
+        android:paddingBottom="@dimen/padding3"
+        android:text="2019-09-08" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivAdapterReceiverPic"
+        style="@style/civ_pic_style"
+        android:layout_below="@id/tvAdapterReceiverTime"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tvAdapterReceiverName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ivAdapterReceiverPic"
+        android:layout_marginLeft="@dimen/margin6"
+        android:layout_toRightOf="@id/ivAdapterReceiverPic"
+        android:text="八马茶业"
+        android:textColor="@color/textLightColor"
+        android:textSize="@dimen/smallTextSize" />
+
+    <TextView
+        android:id="@+id/tvAdapterReceiverContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/ivAdapterReceiverPic"
+        android:layout_marginLeft="@dimen/margin6"
+        android:layout_marginRight="@dimen/dp_40"
+        android:layout_toEndOf="@id/ivAdapterReceiverPic"
+        android:background="@drawable/shape_dark_yellow_corner"
+        android:gravity="center"
+        android:paddingLeft="@dimen/padding12"
+        android:paddingTop="@dimen/padding6"
+        android:paddingRight="@dimen/padding12"
+        android:paddingBottom="@dimen/padding6"
+        android:text="试试吧"
+        android:textColor="@color/white"
+        android:textSize="@dimen/titleTextSize" />
+
+</RelativeLayout>

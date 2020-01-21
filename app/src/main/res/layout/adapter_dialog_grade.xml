@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tvAdapterDialogGrade"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:layout_marginBottom="@dimen/margin1"
+    android:background="@color/white"
+    android:gravity="center"
+    android:text="测试"
+    android:textColor="#ed4216"
+    android:textSize="@dimen/titleTextSize" />

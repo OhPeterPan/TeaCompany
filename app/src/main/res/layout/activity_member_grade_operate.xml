@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding12"
+    android:paddingTop="@dimen/padding12"
+    android:paddingRight="@dimen/padding12">
+
+    <com.example.administrator.chadaodiancompany.view.EditFocusStateLayout
+        android:id="@+id/efsGradeName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:focus_background="@drawable/shape_edit_focus"
+        app:is_integer="false"
+        app:normal_background="@drawable/shape_edit_normal"
+        app:text_hint_more="不同等级对应商品不同价格"
+        app:text_left="等级名称：" />
+
+    <com.example.administrator.chadaodiancompany.view.EditFocusStateLayout
+        android:id="@+id/efsGradeMoney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin12"
+        app:focus_background="@drawable/shape_edit_focus"
+        app:is_integer="false"
+        app:normal_background="@drawable/shape_edit_normal"
+        app:text_hint_more="会员每年购买商品总额"
+        app:text_left="等级对应金额：" />
+
+    <com.example.administrator.chadaodiancompany.view.EditFocusStateLayout
+        android:id="@+id/efsGradeSort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin12"
+        app:focus_background="@drawable/shape_edit_focus"
+        app:is_integer="true"
+        app:normal_background="@drawable/shape_edit_normal"
+        app:text_hint_more="数字范围1~6"
+        app:text_left="排序：" />
+
+    <TextView
+        android:id="@+id/tvMemberGradeStateSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_40"
+        android:background="@drawable/shape_system_dialog_ground"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:padding="@dimen/padding12"
+        android:text="确定提交"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/titleTextSize" />
+</LinearLayout>

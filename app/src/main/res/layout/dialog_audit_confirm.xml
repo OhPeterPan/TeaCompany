@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding12"
+        android:paddingRight="@dimen/padding12">
+
+        <TextView
+            style="@style/textCommentParent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingTop="@dimen/DP45"
+            android:paddingBottom="@dimen/DP45"
+            android:text="会员等级：" />
+
+        <TextView
+            android:id="@+id/tvConfirmGrade"
+            style="@style/textCommentParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_grade_input"
+            android:drawableRight="@drawable/trigon_bottom"
+            android:padding="@dimen/padding12" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorBackground" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvAgreeAuditDialogCancel"
+            style="@style/textCommentParent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/padding12"
+            android:text="取消" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorBackground" />
+
+        <TextView
+            android:id="@+id/tvAgreeAuditDialogConfirm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/padding12"
+            android:text="确认"
+            android:textColor="@color/backgroundRed"
+            android:textSize="@dimen/titleTextSize" />
+    </LinearLayout>
+</LinearLayout>

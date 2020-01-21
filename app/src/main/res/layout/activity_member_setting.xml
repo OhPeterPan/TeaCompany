@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding12"
+        android:paddingRight="@dimen/padding12">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin6"
+            android:background="@drawable/shape_grade_input"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/textCommentParent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/padding12"
+                android:text="自动添加会员功能" />
+
+            <com.suke.widget.SwitchButton
+                android:id="@+id/switchAutoAddMember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:sb_checked="false"
+                app:sb_checked_color="#ec652e"
+                app:sb_enable_effect="false"
+                app:sb_shadow_effect="false"
+                app:sb_shadow_radius="@dimen/margin3"
+                app:sb_show_indicator="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin6"
+            android:background="@drawable/shape_grade_input"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/textCommentParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding12"
+                android:text="满足任一条件即成为基础会员" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin1"
+                android:background="@color/colorBackground" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding12">
+
+                <TextView
+                    style="@style/textCommentParent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1、消费次数超过" />
+
+                <EditText
+                    android:id="@+id/etMemberSettingNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin9"
+                    android:layout_marginRight="@dimen/margin9"
+                    android:background="@drawable/shape_gray_frame"
+                    android:gravity="center"
+                    android:inputType="numberSigned"
+                    android:minWidth="50dp"
+                    android:minHeight="30dp"
+                    android:paddingLeft="@dimen/padding6"
+                    android:paddingRight="@dimen/padding6"
+                    android:textColor="@color/backgroundRed"
+                    android:textSize="@dimen/titleTextSize" />
+
+                <TextView
+                    style="@style/textCommentParent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="次，成为会员" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding12"
+                android:paddingRight="@dimen/padding12"
+                android:paddingBottom="@dimen/padding12">
+
+                <TextView
+                    style="@style/textCommentParent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2、消费金额超过" />
+
+                <EditText
+                    android:id="@+id/etMemberSettingMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin9"
+                    android:layout_marginRight="@dimen/margin9"
+                    android:background="@drawable/shape_gray_frame"
+                    android:gravity="center"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:minWidth="50dp"
+                    android:minHeight="30dp"
+                    android:paddingLeft="@dimen/padding6"
+                    android:paddingRight="@dimen/padding6"
+                    android:textColor="@color/backgroundRed"
+                    android:textSize="@dimen/titleTextSize" />
+
+                <TextView
+                    style="@style/textCommentParent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="元，成为会员" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin6"
+            android:background="@drawable/shape_grade_input"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/textCommentParent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/padding12"
+                android:text="自动降级功能" />
+
+            <com.suke.widget.SwitchButton
+                android:id="@+id/switchIntegral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:sb_checked="false"
+                app:sb_checked_color="#ec652e"
+                app:sb_enable_effect="false"
+                app:sb_shadow_effect="false"
+                app:sb_shadow_radius="@dimen/margin3"
+                app:sb_show_indicator="false" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin6"
+            android:lineSpacingExtra="2dp"
+            android:text=" * 开启后，在每年1月1日审核统计后，根据在“会员等级”中设置的会员等级对应金额，系统自动使会员升级或降级。
+  * 升级：不能超过最高级别；
+  * 降级：不能低于最低级别。"
+            android:textColor="@color/backgroundDarkYellow"
+            android:textSize="@dimen/smallTextSize" />
+
+        <TextView
+            android:id="@+id/tvMemberSettingSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="@dimen/DP50"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/shape_system_dialog_ground"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:padding="@dimen/padding12"
+            android:text="确定提交"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/titleTextSize" />
+    </LinearLayout>
+</ScrollView>

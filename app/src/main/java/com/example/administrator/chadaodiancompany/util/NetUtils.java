@@ -27,9 +27,38 @@ public class NetUtils {
     public static final String SEND_GOOD_URL = "index.php?do=seller_order&of=order_deliver_send";
     public static final String EXPRESS_URL = "index.php?do=seller_order&of=get_current_deliver";
     public static final String HOME_INFO_URL = "index.php?do=seller_order&of=sIndex";
+    public static final String MEMBER_INDEX_URL = "index.php?do=seller_member&of=member_list";
+    public static final String MEMBER_OUT_URL = "index.php?do=seller_member&of=excel";
+    public static final String MEMBER_GRADE_LIST_URL = "index.php?do=seller_member&of=grade_list";
+    public static final String MEMBER_CHANGE_MEMBER_URL = "index.php?do=seller_member&of=member_edit";
+    public static final String ADD_MEMBER_URL = "index.php?do=seller_member&of=member_add";
+    public static final String STATISTIC_INDEX_URL = "index.php?do=seller_stat&of=index";
+    public static final String STATISTICS_SELL_URL = "index.php?do=seller_stat&of=sales";
+    public static final String MEMBER_DEL_URL = "index.php?do=seller_member&of=member_del";
+    public static final String GOOD_ANALYSE_URL = "index.php?do=seller_stat&of=goods_analyze";
+    public static final String SINGLE_GOOD_INFO_URL = "index.php?do=seller_stat&of=single_analyze";
+    public static final String STATISTIC_SEARCH_URL = "index.php?do=seller_stat&of=class_list";
+    public static final String SEARCH_INFO_URL = "index.php?do=seller_stat&of=search_analyze";
+    public static final String DEL_MEMBER_GRADE_URL = "index.php?do=seller_member&of=grade_del";
+    public static final String MEMBER_GRADE_INFO_URL = "index.php?do=seller_member&of=grade_info";
+    public static final String EDIT_MEMBER_GRADE_URL = "index.php?do=seller_member&of=grade_edit";
+    public static final String ADD_MEMBER_GRADE_URL = "index.php?do=seller_member&of=grade_add";
+    public static final String ADD_MEMBER_AUDIT_URL = "index.php?do=seller_member&of=audit_list";
+    public static final String MEMBER_AUDIT_RESULT_URL = "index.php?do=seller_member&of=audit_save";
+    public static final String MEMBER_SETTING_INFO_URL = "index.php?do=seller_member&of=grade_setinfo";
+    public static final String MEMBER_SETTING_INFO_SAVE_URL = "index.php?do=seller_member&of=grade_set";
+    public static final String PAY_METHOD_URL = "index.php?do=seller_order&of=payment_list";
+    public static final String CONFIRM_PAY_URL = "index.php?do=seller_order&of=order_receive_pay";
+    public static final String APP_UPDATE_URL = "index.php?do=version&of=andriod_sup_version";
+    public static final String INTERACT_MESSAGE_URL = "index.php?do=seller_msg&of=get_chat_list";
+    public static final String INTERACT_MESSAGE_DETAIL_URL = "index.php?do=seller_msg&of=get_chat_log";
+    public static final String INTERACT_MESSAGE_SEND_URL = "index.php?do=seller_msg&of=send_msg";
+    public static final String EXPORT_GOOD_URL = "index.php?do=seller_stat&of=excel";
     /**
      * 省份列表
      */
     //  public static final String PROVINCE_LIST = "mobile/index.php?act=area&op=area_list";
     public static final String PROVINCE_LIST = "index.php?do=area&of=area_lists";
+
+
 }

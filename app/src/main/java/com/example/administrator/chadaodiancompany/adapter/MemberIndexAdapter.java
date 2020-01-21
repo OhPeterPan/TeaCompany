@@ -1,23 +1,22 @@
 package com.example.administrator.chadaodiancompany.adapter;
 
-import android.support.annotation.Nullable;
-
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.example.administrator.chadaodiancompany.R;
+import com.example.administrator.chadaodiancompany.bean.MemberListBean;
 
-import java.util.List;
-
-public class MemberIndexAdapter extends BaseQuickAdapter<String, BaseViewHolder> {
-    public MemberIndexAdapter(@Nullable List<String> data) {
-        super(R.layout.adapter_member_index, data);
+public class MemberIndexAdapter extends BaseQuickAdapter<MemberListBean, BaseViewHolder> {
+    public MemberIndexAdapter() {
+        super(R.layout.adapter_member_index, null);
     }
 
     @Override
-    protected void convert(BaseViewHolder helper, String item) {
+    protected void convert(BaseViewHolder helper, MemberListBean item) {
         int position = helper.getAdapterPosition();
         helper.setText(R.id.tvAdapterOrderNumber, String.valueOf(position + 1));
-        helper.setText(R.id.tvAdapterCompanyName, "我是一个公司的名称");
+        helper.setText(R.id.tvAdapterCompanyName, item.c_name);
+        helper.setText(R.id.tvAdapterMemberName, item.member_name);
+        helper.setText(R.id.tvAdapterARTNO, item.grade_name);
         if (position % 2 == 0) {
             helper.setBackgroundRes(R.id.layout_front, R.color.colorBackground);
         } else {

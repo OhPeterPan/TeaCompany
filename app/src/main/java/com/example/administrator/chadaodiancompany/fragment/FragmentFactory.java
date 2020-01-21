@@ -41,4 +41,11 @@ public class FragmentFactory {
         }
         return fragment;
     }
+
+    public static void destroy() {
+        if (hashMap != null) {
+            hashMap.clear();
+            hashMap = null;
+        }
+    }
 }

@@ -13,7 +13,6 @@ import com.example.administrator.chadaodiancompany.bean.HomeDetailBean;
 import com.example.administrator.chadaodiancompany.bean.HomeDetailBean.HomeDataBean.HomeStatisticsBean;
 import com.example.administrator.chadaodiancompany.fragment.BaseFragment;
 import com.example.administrator.chadaodiancompany.presenter.HomeDetailPresenter;
-import com.example.administrator.chadaodiancompany.util.LogUtil;
 import com.example.administrator.chadaodiancompany.util.UIUtil;
 import com.example.administrator.chadaodiancompany.view.IHomeDetailView;
 import com.example.administrator.chadaodiancompany.view.NestGridView;
@@ -104,7 +103,6 @@ public class HomeFragment extends BaseFragment<HomeDetailPresenter> implements I
                 .setBadgeText(homeDataBean.goods_online).setGravityOffset(0, -2, true)
                 .setBadgeTextSize(8, true);
         homeList = homeDataBean.statistics;
-        LogUtil.logI("首页：" + homeList.size());
         initSellList();
     }
 

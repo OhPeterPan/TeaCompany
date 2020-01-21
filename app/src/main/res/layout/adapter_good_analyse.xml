@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/padding6"
+    android:paddingBottom="@dimen/padding6">
+
+    <TextView
+        android:id="@+id/tvAdapterGoodAnalyseNO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding12"
+        android:text="1"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/titleTextSize" />
+
+    <ImageView
+        android:id="@+id/ivAdapterGoodAnalysePic"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tvAdapterGoodAnalyseName"
+        style="@style/textCommentParent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingLeft="@dimen/padding10"
+        android:paddingRight="@dimen/padding10" />
+
+    <TextView
+        android:id="@+id/tvAdapterGoodAnalyseNumber"
+        style="@style/textCommentParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/DP25"
+        android:text="数量" />
+</LinearLayout>

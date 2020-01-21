@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding12"
+    android:paddingRight="@dimen/padding12">
+
+    <TextView
+        android:id="@+id/tvMemberAuditInfoName"
+        style="@style/textCommentParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/dp_40"
+        tools:text="asldfaskldkjfasjkldfjka" />
+
+    <TextView
+        android:id="@+id/tvMemberAuditInfo"
+        style="@style/textCommentTransParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="2dp"
+        tools:text="asdhfasghfgasuidfiuasfuisduhi" />
+
+    <TextView
+        android:id="@+id/tvMemberAuditInfoMemberName"
+        style="@style/textCommentTransParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/DP20"
+        android:gravity="right"
+        tools:text="申请人：" />
+
+    <TextView
+        android:id="@+id/tvMemberAuditInfoTime"
+        style="@style/textCommentTransParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin6"
+        android:gravity="right"
+        tools:text="申请时间：" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_marginBottom="@dimen/margin20"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvMemberAuditInfoRefuse"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_40"
+            android:background="@drawable/shape_yellow_audit"
+            android:gravity="center"
+            android:paddingTop="@dimen/padding6"
+            android:paddingBottom="@dimen/padding6"
+            android:text="拒绝"
+            android:textColor="@color/backgroundDarkYellow"
+            android:textSize="@dimen/titleTextSize" />
+
+        <TextView
+            android:id="@+id/tvMemberAuditInfoConfirm"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:background="@drawable/shape_system_audit_ground"
+            android:gravity="center"
+            android:paddingTop="@dimen/padding6"
+            android:paddingBottom="@dimen/padding6"
+            android:text="同意"
+            android:textColor="@color/white"
+            android:textSize="@dimen/titleTextSize" />
+    </LinearLayout>
+</LinearLayout>

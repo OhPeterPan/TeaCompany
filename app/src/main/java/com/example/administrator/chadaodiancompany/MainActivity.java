@@ -19,6 +19,7 @@ import com.example.administrator.chadaodiancompany.fragment.home.OrderFragment;
 import com.example.administrator.chadaodiancompany.ui.SettingActivity;
 import com.example.administrator.chadaodiancompany.ui.good.GoodSearchActivity;
 import com.example.administrator.chadaodiancompany.util.CommonUtil;
+import com.gyf.barlibrary.ImmersionBar;
 
 import butterknife.BindView;
 
@@ -53,6 +54,11 @@ public class MainActivity extends BaseToolbarActivity implements RadioGroup.OnCh
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void initToolbar() {
+
     }
 
     @Override
@@ -91,6 +97,7 @@ public class MainActivity extends BaseToolbarActivity implements RadioGroup.OnCh
 
     @Override
     protected void initData() {
+        initToolbar(false);
         mFragmentManager = getSupportFragmentManager();
         tvActTitle.setText(storeName);
         checkIndex(0);
@@ -150,10 +157,11 @@ public class MainActivity extends BaseToolbarActivity implements RadioGroup.OnCh
 
         if (index == 1) {
             ivActRightSearch.setVisibility(View.VISIBLE);
+            ivActRightSetting.setVisibility(View.GONE);
         } else {
             ivActRightSearch.setVisibility(View.GONE);
+            ivActRightSetting.setVisibility(View.VISIBLE);
         }
-
 
         mBeginTransaction = mFragmentManager.beginTransaction();
         if (lastFragment != null)
@@ -171,8 +179,19 @@ public class MainActivity extends BaseToolbarActivity implements RadioGroup.OnCh
         lastFragment = fragment;
         if (index == 2) {
             toolbar.setVisibility(View.GONE);
+            baseView.setVisibility(View.GONE);
+            ImmersionBar.with(this)
+                    .statusBarColor(R.color.status_bar_color)
+                    .statusBarDarkFont(true)
+                    .init();
         } else {
             toolbar.setVisibility(View.VISIBLE);
+            baseView.setVisibility(View.VISIBLE);
+            ImmersionBar.with(this)
+                    .fitsSystemWindows(true)
+                    .statusBarColor(R.color.white)
+                    .statusBarDarkFont(true)
+                    .init();
         }
     }
 
@@ -205,6 +224,12 @@ public class MainActivity extends BaseToolbarActivity implements RadioGroup.OnCh
                 }
                 break;
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        FragmentFactory.destroy();
     }
 
     @Override

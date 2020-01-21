@@ -20,6 +20,7 @@ public class DelStateDialog extends AlertDialog implements View.OnClickListener 
     TextView tvDelDialogCancel;
     @BindView(R.id.tvDelDialogConfirm)
     TextView tvDelDialogConfirm;
+    private IOnConfirmClickListener listener;
 
     public DelStateDialog(@NonNull Context context) {
         super(context, R.style.CommonDialog);
@@ -43,7 +44,20 @@ public class DelStateDialog extends AlertDialog implements View.OnClickListener 
     public void onClick(View v) {
         dismiss();
         if (v.getId() == R.id.tvDelDialogConfirm) {//确认
-
+            if (listener != null)
+                listener.confirmClickListener();
         }
+    }
+
+    public void setDialogInfo(String msg) {
+        tvDelDialogInfo.setText(msg);
+    }
+
+    public void setOnConfirmClickListener(IOnConfirmClickListener listener) {
+        this.listener = listener;
+    }
+
+    public interface IOnConfirmClickListener {
+        void confirmClickListener();
     }
 }

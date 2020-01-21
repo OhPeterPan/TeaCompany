@@ -16,6 +16,7 @@ public class OrderDetailBean {
             public String order_id;
             public String order_sn;
             public String price_remark;
+            public String pay_remark;
             public String pay_sn;
             public String order_type;
             public String store_id;

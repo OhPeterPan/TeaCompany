@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/textCommentParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="@dimen/padding12"
+        android:text="更新日志" />
+
+    <TextView
+        android:id="@+id/tvUpdateInfo"
+        style="@style/textCommentParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/padding12"
+        android:paddingTop="@dimen/padding12"
+        android:paddingBottom="@dimen/padding12"
+        tools:text="确认删除该会员？" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorBackground" />
+
+    <TextView
+        android:id="@+id/tvConfirmUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/padding12"
+        android:text="确认更新"
+        android:textColor="@color/backgroundRed"
+        android:textSize="@dimen/titleTextSize" />
+
+</LinearLayout>

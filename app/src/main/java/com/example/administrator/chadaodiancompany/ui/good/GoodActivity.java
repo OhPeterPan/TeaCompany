@@ -120,7 +120,7 @@ public class GoodActivity extends BaseToolbarActivity<GoodIndexPresenter> implem
 
     @Override
     public void onItemChildClick(BaseQuickAdapter adapter, View v, int position) {
-        GoodsListBean bean = (GoodsListBean) adapter.getItem(position);
+         bean = (GoodsListBean) adapter.getItem(position);
         this.mPosition = position;
         if (bean == null) return;
         switch (v.getId()) {
@@ -343,12 +343,15 @@ public class GoodActivity extends BaseToolbarActivity<GoodIndexPresenter> implem
 
     @Override
     public void getBanGoodDetailSuccess(String result) {
-
+        ToastUtil.showSuccess("下架成功！");
+        cbHeadAllGood.setChecked(false);
+        swipeRefresh.setRefreshing(true);
+        onRefresh();
     }
 
     @Override
     public void changeGoodNumberSuccess(String result) {
-
+        if (adapter != null) adapter.notifyItemChanged(mPosition + adapter.getHeaderLayoutCount());
     }
 
     public static void launch(Context context) {

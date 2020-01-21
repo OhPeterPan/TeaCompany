@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvGoodsSearchDetailTime"
+        style="@style/textCommentTransParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:drawableRight="@drawable/ic_calendar_pic"
+        android:gravity="center"
+        android:padding="@dimen/padding12"
+        android:text="2018-07-01~2018-08-02" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin3"
+        android:background="@color/colorBackground" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/tvGoodsSearchDetailTitle"
+            style="@style/textCommentParent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:padding="@dimen/padding12"
+            android:text="会员" />
+
+        <com.example.administrator.chadaodiancompany.view.ImageCenterTextView
+            android:id="@+id/ictMemberSellNum"
+            style="@style/textCommentParent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:drawableRight="@drawable/select_statistic_sell"
+            android:drawablePadding="@dimen/padding6"
+            android:gravity="center"
+            android:text="数量" />
+
+        <com.example.administrator.chadaodiancompany.view.ImageCenterTextView
+            android:id="@+id/ictMemberSellMoney"
+            style="@style/textCommentParent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:drawableRight="@drawable/select_statistic_sell"
+            android:drawablePadding="@dimen/padding6"
+            android:gravity="center"
+            android:text="下单金额" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never" />
+</LinearLayout>

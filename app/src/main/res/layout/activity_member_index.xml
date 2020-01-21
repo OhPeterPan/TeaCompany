@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/ic_member_back_ground"
         android:orientation="horizontal">
 
@@ -16,10 +17,11 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
+            android:lineSpacingExtra="2dp"
             android:padding="@dimen/padding12"
-            android:text="会员总数"
             android:textColor="@color/white"
-            android:textSize="@dimen/titleTextSize" />
+            android:textSize="@dimen/smallTextSize"
+            tools:text="会员总数" />
 
         <View
             android:layout_width="1dp"
@@ -34,10 +36,11 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
+            android:lineSpacingExtra="2dp"
             android:padding="@dimen/padding12"
-            android:text="今年订货额"
             android:textColor="@color/white"
-            android:textSize="@dimen/titleTextSize" />
+            android:textSize="@dimen/smallTextSize"
+            tools:text="1000" />
 
         <View
             android:layout_width="1dp"
@@ -52,10 +55,11 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
+            android:lineSpacingExtra="2dp"
             android:padding="@dimen/padding12"
-            android:text="本月订货额"
             android:textColor="@color/white"
-            android:textSize="@dimen/titleTextSize" />
+            android:textSize="@dimen/smallTextSize"
+            tools:text="本月订货额" />
     </LinearLayout>
 
     <LinearLayout
@@ -94,15 +98,18 @@
             android:paddingBottom="12dp"
             android:text="创建人" />
 
-        <TextView
+        <com.example.administrator.chadaodiancompany.view.ImageCenterTextView
+            android:id="@+id/tvMemberGrade"
             style="@style/textCommentParent"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.8"
+            android:drawableRight="@drawable/select_statistic_sell"
+            android:drawablePadding="@dimen/padding6"
             android:gravity="center"
             android:paddingTop="12dp"
             android:paddingBottom="12dp"
-            android:text="等级 V" />
+            android:text="等级" />
     </LinearLayout>
 
     <android.support.v7.widget.RecyclerView

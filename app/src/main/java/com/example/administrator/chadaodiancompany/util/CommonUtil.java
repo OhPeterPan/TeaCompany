@@ -16,6 +16,19 @@ public class CommonUtil {
     public static final int RESULT_CODE = 0x002;
     public static final String SHOP_ID = "shopId";
     public static final String GOOD_IMAGE = "goodImage";
+    public static final String MEMBER_ID = "memberId";
+    public static final String MEMBER_INFO = "memberInfo";
+    public static final String START_TIME = "startTime";//使用intent传递的一些key
+    public static final String END_TIME = "endTime";//使用intent传递的一些key
+    public static final String GOOD_ID = "goodId";
+    public static final String GRADE_ID = "gradeId";
+    public static final String NAME = "NAME";
+    public static final String TIME = "time";
+    public static final String C_NAME = "c_name";
+
+    public static int RESULT_CODE_COMMON = 170;//一些其他的结果码
+    public static int RESULT_CODE_EXPORT = 171;//导出的结果码
+
 
     public static class OkGoTag {
         public static final String ORDER_TAG = "orderTag";

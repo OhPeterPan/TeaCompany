@@ -4,4 +4,11 @@
         <attr name="text" format="string" />
         <attr name="duration" format="integer" />
     </declare-styleable>
+    <declare-styleable name="editFocusState">
+        <attr name="normal_background" format="reference" />
+        <attr name="focus_background" format="reference" />
+        <attr name="is_integer" format="boolean" />
+        <attr name="text_left" format="string" />
+        <attr name="text_hint_more" format="string" />
+    </declare-styleable>
 </resources>

@@ -112,7 +112,7 @@ public class OrderDetailActivity extends BaseToolbarActivity<OrderDetailPresente
     private TextView tvExpressMoney;
     private TextView tvStoreFavourableMoney;
     private TextView tvExtraMoney;
-    private TextView tvPurchaseOrderDetailInfo;
+    private TextView tvPurchaseOrderDetailInfo, tvOrderDetailRemark;
     private LinearLayout llStoreFavourableMoney;
     private DeliverBean deliverBean;
     private List<DeliverGoodsList> deliverGoodList;
@@ -172,6 +172,7 @@ public class OrderDetailActivity extends BaseToolbarActivity<OrderDetailPresente
 
         llStoreFavourableMoney = footView.findViewById(R.id.llStoreFavourableMoney);
         tvPurchaseOrderDetailInfo = footView.findViewById(R.id.tvPurchaseOrderDetailInfo);
+        tvOrderDetailRemark = footView.findViewById(R.id.tvOrderDetailRemark);
     }
 
     private void initMagic() {
@@ -246,11 +247,22 @@ public class OrderDetailActivity extends BaseToolbarActivity<OrderDetailPresente
         stateDesc = orderInfo.state_desc;
         deliverList = orderInfo.deliver;
         String priceRemark = orderInfo.price_remark;
+        String payRemark = orderInfo.pay_remark;
+
         tvPurchaseOrderDetailState.setText("订单状态：" + stateDesc);
-        if (StringUtils.isEmpty(priceRemark)) {
+        if (priceRemark == null || StringUtils.isEmpty(priceRemark.trim())) {
+            tvOrderDetailGoodPriceRemark.setVisibility(View.GONE);
             tvOrderDetailGoodPriceRemark.setText("修改价格原因：无");
         } else {
+            tvOrderDetailGoodPriceRemark.setVisibility(View.VISIBLE);
             tvOrderDetailGoodPriceRemark.setText("修改价格原因：" + priceRemark);
+        }
+
+        if (payRemark == null || StringUtils.isEmpty(payRemark.trim())) {
+            tvOrderDetailRemark.setVisibility(View.GONE);
+        } else {
+            tvOrderDetailRemark.setVisibility(View.VISIBLE);
+            tvOrderDetailRemark.setText("确认收款备注：" + payRemark);
         }
 
         if (orderState == 10) {
@@ -275,7 +287,7 @@ public class OrderDetailActivity extends BaseToolbarActivity<OrderDetailPresente
             //收货电话
             String orderPhone = reciverInfo.phone;
 
-            tvHeadAddressName.setText(orderInfo.buyer_name);
+            tvHeadAddressName.setText(reciverInfo.reciver_name);
             tvHeadAddressPhone.setText(orderPhone);
             tvHeadAddressAddress.setText(address);
         }
@@ -286,7 +298,7 @@ public class OrderDetailActivity extends BaseToolbarActivity<OrderDetailPresente
             tvHeadInvoiceInfo.setVisibility(View.GONE);
         } else {
             tvHeadInvoiceInfo.setVisibility(View.VISIBLE);
-            tvHeadInvoiceInfo.setText("发票信息:\n" + invoice.info);
+            tvHeadInvoiceInfo.setText("发票信息\n发票抬头:" + invoice.title + "\n发票内容:" + invoice.info);
         }
 
         //订单货号
